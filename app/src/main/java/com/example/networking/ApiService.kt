@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface ApiService {
     @GET("posts") // Replace with your endpoint
-    fun getYourData(): Call<List<Post>>
+    fun getYourData():    Call<List<Post>>
 }
