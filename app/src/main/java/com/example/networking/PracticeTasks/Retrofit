@@ -1,0 +1,32 @@
+Retrofit is a powerful HTTP client for Android and Java that makes it easy to consume RESTful web services.
+It simplifies the process of making network requests and handling responses.
+
+Serialization:
+
+What it is: The process of converting a Kotlin object into JSON format.
+When it happens: This occurs when you want to send data to the server (e.g., in a POST request).
+Example: If you have a Kotlin object like User , Gson will convert it into a JSON string that can be sent in the request body.
+
+val newUser  = User(id = 2, name = "Jane Doe", email = "jane.doe@example.com")
+// Gson converts newUser  to JSON:
+// {
+//     "id": 2,
+//     "name": "Jane Doe",
+//     "email": "jane.doe@example.com"
+// }
+
+🍎🍎🍎🍎🍎🍎🍎🍎🍎🍎
+Deserialization:
+
+What it is: The process of converting JSON data received from the server into a Kotlin object.
+When it happens: This occurs when you make a GET request and receive a JSON response from the server.
+Example: If the server responds with a JSON string representing a user, Gson will convert that JSON into a User  object.
+
+{
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+}
+
+After deserialization, you get a Kotlin object:
+val user = User(id = 1, name = "John Doe", email = "john.doe@example.com")
